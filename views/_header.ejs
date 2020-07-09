@@ -24,6 +24,9 @@
     </div>
     <div id="sign-in-out"> 
         <% if(locals.user){ %>
+            <div>
+                <a href="/users/profile"><%= user.name %></a>
+            </div>
         <div>
             <a href="/users/sign-out">Sign Out</a>
         </div>

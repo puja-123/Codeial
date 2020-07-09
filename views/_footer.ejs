@@ -4,9 +4,12 @@
             Official all right reserved
         </div>
         <% if(locals.user){ %>
-        <div>
-            <a href="/users/profile"><%= user.name %></a>
-        </div>
+            <div>
+                <a href="/users/home">Home</a>
+            </div>
+            <div>
+                <a href="/users/user_profile">Profile</a>
+            </div>
         <% } else{%>
         <div>
             <a href="/users/sign-up">Sign Up</a>
