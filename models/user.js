@@ -13,6 +13,10 @@ const userSchema = new mongoose.Schema({
     name : {
         type : String ,
         required : true
+    },
+    security_question : {
+        type : String,
+        required : true
     }
 },
     {

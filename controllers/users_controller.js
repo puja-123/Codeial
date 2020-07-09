@@ -5,13 +5,23 @@ module.exports.profile = function(req,res)
         title : "Profile Page"
     } );
 }
+//rendering the sign up page
 module.exports.signUp = function(req,res){
+    if(req.isAuthenticated())
+    {
+       return res.redirect('/users/profile');
+    }
+
     return res.render('user_sign_up' , {
         title : "Codial | Sign Up "
     })
 }
 //rendering the sign in page
 module.exports.signIn = function(req,res){
+    if(req.isAuthenticated())
+    {
+       return res.redirect('/users/profile');
+    }
     return res.render('user_sign_in' , {
         title : "Codial | Sign In "
     })
@@ -45,5 +55,27 @@ module.exports.create = function(req,res)
 //get the sign in data
 module.exports.createSession = function(req,res)
 {
-    //TODO LATER
+    return res.redirect('/');
+}
+    //get the sign out
+module.exports.destroySession = function(req,res)
+{
+    req.logout();
+    return res.redirect('/');
+}
+// module.exports.resetPassword = function(req,res)
+// {
+//     if(req.isAuthenticated())
+//     {
+//        return res.redirect('/users/profile');
+//     }
+//     return res.render('reset_password' , {
+//         title : "Codial | reset password "
+//     })
+// }
+module.exports.verifyUser = function(req,res)
+{
+    return res.render('user_password_reset' , {
+        title : "Codial | reset password "
+    })
 }

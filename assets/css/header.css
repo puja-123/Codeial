@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  background-color: white;
+  height: 10vh;
+  width: 99vw; }
+  header #website-logo {
+    border: 2px solid black;
+    margin-right: 4px; }
+  header #sign-in-out {
+    display: flex; }
+    header #sign-in-out div {
+      border: 2px solid black; }

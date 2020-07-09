@@ -1,0 +1,8 @@
+footer {
+  bottom: 0px;
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  border: 2px solid black; }
+  footer div {
+    border: 2px solid white; }
